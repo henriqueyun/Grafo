@@ -1,2 +1,5 @@
 # Friend
-Demonstração de um uso simples de grafos em Java.
+
+Implementação simples de um grafo de objetos, com os métodos:
+- BFS
+- DFS 
