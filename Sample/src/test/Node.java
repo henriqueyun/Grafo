@@ -1,5 +1,6 @@
+package test;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Node {
@@ -11,9 +12,9 @@ public class Node {
         this.name = name;
     }
     public void associate (Node newNode) {
-        //for (Node node : adj) {
+        //for (test.Node node : adj) {
 //            if (newNode == node) {
-//                Util.log("node.java this node already exists here.");
+//                test.Util.log("node.java this node already exists here.");
 //            } else {
                 adj.add(newNode);
 //            }

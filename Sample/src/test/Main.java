@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package test;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,10 +6,10 @@ public class Main {
 
           Grafo g = new Grafo();
           g.bfs(new Node("Henrique"));
-//        g.addNode(new Node("Henrique"));
-//        g.addNode(new Node("David"));
-//        g.addNode(new Node("Didi"));
-//        g.addNode(new Node("Felipe"));
+//        g.addNode(new test.Node("Henrique"));
+//        g.addNode(new test.Node("David"));
+//        g.addNode(new test.Node("Didi"));
+//        g.addNode(new test.Node("Felipe"));
 //
 //        g.associate(g.nodes.get(0), g.nodes.get(1));
 //        g.associate(g.nodes.get(1), g.nodes.get(2));
@@ -17,7 +17,7 @@ public class Main {
 //        g.associate(g.nodes.get(3), g.nodes.get(0));
 //
 //        g.dfs(g.nodes.get(0));
-//        Util.log();
+//        test.Util.log();
     }
 }
 

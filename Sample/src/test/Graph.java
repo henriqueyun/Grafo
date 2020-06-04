@@ -1,3 +1,5 @@
+package test;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -9,11 +11,11 @@ class Graph
     private LinkedList<Integer> adj[];
 
     // Constructor
-    Graph(int v)
+    Graph(int V)
     {
-        V = v;
-        adj = new LinkedList[v];
-        for (int i=0; i<v; ++i)
+        this.V = V;
+        adj = new LinkedList[V];
+        for (int i=0; i<V; ++i)
             adj[i] = new LinkedList();
     }
 

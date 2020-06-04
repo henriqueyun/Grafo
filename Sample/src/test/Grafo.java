@@ -1,3 +1,5 @@
+package test;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -27,7 +29,7 @@ public class Grafo {
     HashSet<Node> visited = new HashSet<Node>();
 
     public void dfs (Node currentNode) {
-        Util.log("Node atual " + currentNode.name);
+        Util.log("test.Node atual " + currentNode.name);
         visited.add(currentNode);
         for (Node node : currentNode.adj) {
             Util.log("see " + node.name);
