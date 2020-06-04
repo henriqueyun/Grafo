@@ -3,7 +3,7 @@ package prod;
 import javax.management.loading.ClassLoaderRepository;
 import java.util.ArrayList;
 
-public class Konoha {
+public class Faculdade {
 
     public static void main(String[] args) {
 
@@ -28,5 +28,6 @@ public class Konoha {
         gda.criarAmizadeEntre(amigos.get(0), amigos.get(5));
 
         gda.DFS(amigos.get(0));
+        gda.BFS(amigos.get(0));
     }
 }

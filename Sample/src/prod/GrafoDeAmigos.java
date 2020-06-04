@@ -18,7 +18,7 @@ public class GrafoDeAmigos {
     }
 
     public void realDFS (Amigo a) {
-        if (!foiVisitado(a)) {
+        if (!visitados.contains(a)) {
             System.out.println(a.toString() + " at DFS ");
             visitados.add(a);
             for(Amigo amigo : a.getAmigos()) {
@@ -27,15 +27,21 @@ public class GrafoDeAmigos {
         }
     }
 
- 
-
-    public boolean foiVisitado(Amigo a) {
-        for (Amigo v : visitados) {
-            if (v == a) {
-                return true;
+    public void BFS (Amigo a) {
+        ArrayDeque<Amigo> fila = new ArrayDeque<Amigo>();
+        visitados = new ArrayList<Amigo>();
+        visitados.add(a);
+        fila.push(a);
+        while(!fila.isEmpty()) {
+            Amigo amigo = fila.remove();
+            System.out.println(amigo.toString());
+            for (Amigo iterator : amigo.getAmigos()) {
+                if(!visitados.contains(iterator))
+                    fila.push(iterator);
+                    visitados.add(iterator);
             }
         }
-        return false;
     }
+
 
 }
