@@ -13,13 +13,14 @@ public class GrafoDeAmigos {
     }
 
     public void DFS (Amigo a) {
+        System.out.println("> Busca em Profundidade");
         visitados = new ArrayList<Amigo>();
         realDFS(a);
     }
 
     public void realDFS (Amigo a) {
         if (!visitados.contains(a)) {
-            System.out.println(a.toString() + " at DFS ");
+            System.out.println(a.toString());
             visitados.add(a);
             for(Amigo amigo : a.getAmigos()) {
                 realDFS(amigo);
@@ -28,20 +29,20 @@ public class GrafoDeAmigos {
     }
 
     public void BFS (Amigo a) {
+        System.out.println("> Busca em Largura");
         ArrayDeque<Amigo> fila = new ArrayDeque<Amigo>();
         visitados = new ArrayList<Amigo>();
         visitados.add(a);
-        fila.push(a);
+        fila.addFirst(a);
         while(!fila.isEmpty()) {
-            Amigo amigo = fila.remove();
-            System.out.println(amigo.toString());
+            Amigo amigo = fila.removeLast();
             for (Amigo iterator : amigo.getAmigos()) {
-                if(!visitados.contains(iterator))
+                if(!visitados.contains(iterator)) {
+                    System.out.println(iterator.toString());
                     fila.push(iterator);
                     visitados.add(iterator);
+                }
             }
         }
     }
-
-
 }
